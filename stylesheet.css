@@ -1,0 +1,263 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  Palette drawn from the photo:
+  - background:  warm off-white  #f7f3ee
+  - body text:   warm charcoal   #2c2318
+  - muted text:  warm gray       #7a6e65
+  - accent/link: muted sea blue  #4f7fa0
+  - borders:     warm sand       #dfd6cb
+  - tags bg:     light sand      #ece6de
+*/
+
+body {
+    font-family: "EB Garamond", Georgia, serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #2c2318;
+    background: #f7f3ee;
+    padding: 52px 20px 96px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    color: #1e1710;
+    text-align: center;
+}
+
+.header-body {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.header-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar {
+    width: 220px;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+}
+
+.bio p {
+    font-size: 0.95rem;
+    color: #4a3e34;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.contact {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pill {
+    font-size: 0.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pill.email   { background: #fce8e6; color: #a83830; }
+.pill.cv      { background: #e8ede5; color: #456640; }
+.pill.scholar { background: #e6edf8; color: #3060a8; }
+.pill.github  { background: #e6e5e2; color: #2e2c28; }
+.pill.linkedin { background: #deeaf6; color: #1e5c9e; }
+
+.pill:hover {
+    filter: brightness(0.93);
+}
+
+@media (max-width: 560px) {
+    .header-body {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        width: 100%;
+        height: 240px;
+    }
+}
+
+/* Sections */
+
+h2 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #a09488;
+    border-bottom: 1px solid #dfd6cb;
+    padding-bottom: 6px;
+    margin: 36px 0 16px;
+}
+
+.entry,
+.pub {
+    margin-bottom: 18px;
+}
+
+/* Row: title + date side by side */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 0.925rem;
+    color: #2c2318;
+}
+
+.title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 0.82rem;
+    color: #b0a498;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: #7a6e65;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* Tech tags */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 5px 0 5px;
+}
+
+.tag {
+    font-size: 0.72rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #8a7e74;
+    background: #ece6de;
+    border-radius: 3px;
+    padding: 1px 7px;
+}
+
+/* Bullet lists */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+ul li {
+    font-size: 0.875rem;
+    color: #4a3e34;
+    padding-left: 1.2em;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+ul li::before {
+    content: "◦";
+    position: absolute;
+    left: 0;
+    color: #c8beb4;
+}
+
+/* Publications */
+
+.pub-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pub-title a {
+    color: #2c2318;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+}
+
+.pub-authors {
+    font-size: 0.84rem;
+    color: #8a7e74;
+    margin-top: 3px;
+    line-height: 1.5;
+}
+
+/* Inline paragraphs */
+
+p {
+    font-size: 0.875rem;
+    color: #5c5048;
+    margin-top: 4px;
+}
+
+/* Generic links */
+
+a {
+    color: #4f7fa0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+}

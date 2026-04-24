@@ -92,7 +92,8 @@ h1 {
 .pill.cv      { background: #e8ede5; color: #456640; }
 .pill.scholar { background: #e6edf8; color: #3060a8; }
 .pill.github  { background: #e6e5e2; color: #2e2c28; }
-.pill.linkedin { background: #deeaf6; color: #1e5c9e; }
+.pill.linkedin  { background: #deeaf6; color: #1e5c9e; }
+.pill.instagram { background: #fce8f0; color: #a0305a; }
 
 .pill:hover {
     filter: brightness(0.93);
